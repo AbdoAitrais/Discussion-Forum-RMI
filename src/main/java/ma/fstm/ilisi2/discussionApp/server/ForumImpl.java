@@ -2,7 +2,6 @@ package ma.fstm.ilisi2.discussionApp.server;
 
 import proxy.Proxy;
 
-import java.io.Serializable;
 import java.net.InetAddress;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
@@ -18,7 +17,7 @@ public class ForumImpl extends UnicastRemoteObject implements Forum {
     public ForumImpl() throws RemoteException {
         super();
         i=0;
-        ListClient= new TreeMap<Integer,Proxy>();
+        ListClient= new TreeMap<>();
 
         try{
             hostname = InetAddress.getLocalHost().getHostName();
@@ -34,15 +33,14 @@ public class ForumImpl extends UnicastRemoteObject implements Forum {
             String hostname = InetAddress.getLocalHost().getHostName();
             Naming.rebind("rmi://localhost:9099/Server", server);
             System.out.println("Server listening on "+ 9099 +"...");
-        } catch (Exception ex) {
-            System.err.println("Server exception: " + ex.toString());
-            ex.printStackTrace();
+        } catch (Exception e) {
+            System.err.println("Server exception: " + e);
+            e.printStackTrace();
         }
     }
     @Override
     public synchronized int entrer(Proxy pr) throws RemoteException {
-        i++;
-        System.out.println("Client numero "+i+" connecté");
+        System.out.println("Client numero "+(++i)+" connecté");
         pr.ecouter("client connecté a "+9099+ " avec Id "+i);
         ListClient.put(i,pr);
         return i;
@@ -50,17 +48,15 @@ public class ForumImpl extends UnicastRemoteObject implements Forum {
 
     @Override
     public synchronized void dire(int id, String msg) throws RemoteException {
-//        Proxy proxy;
-//        proxy=ListClient.get(id);
-//        proxy.ecouter(msg);
         for (Proxy proxy : ListClient.values()) {
-            proxy.ecouter(msg);
+            proxy.ecouter("user"+id+" : "+msg);
         }
     }
 
     @Override
     public synchronized String qui() throws RemoteException {
         StringBuilder s= new StringBuilder();
+        s.append("Liste des clients connectés : ");
         for (Integer key : ListClient.keySet()) {
             s.append(key).append(" ");
         }

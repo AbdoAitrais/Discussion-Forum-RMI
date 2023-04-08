@@ -1,11 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c0266cb-e3af-4fa3-8529-deffa5dfb213" name="Changes" comment="" />
+    <list default="true" id="3c0266cb-e3af-4fa3-8529-deffa5dfb213" name="Changes" comment="Initial Commit">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ma/fstm/ilisi2/discussionApp/client/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/fstm/ilisi2/discussionApp/client/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ma/fstm/ilisi2/discussionApp/client/UserImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/fstm/ilisi2/discussionApp/client/UserImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ma/fstm/ilisi2/discussionApp/server/Forum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/fstm/ilisi2/discussionApp/server/Forum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ma/fstm/ilisi2/discussionApp/server/ForumImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/fstm/ilisi2/discussionApp/server/ForumImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/proxy/Proxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proxy/Proxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/proxy/ProxyImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proxy/ProxyImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2NppOqJbKOaGEcD7cxhrFSpHgWV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -17,9 +44,94 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false"
   }
 }]]></component>
+  <component name="RunManager" selected="Application.ForumImpl">
+    <configuration name="ForumDiscussion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ma.fstm.ilisi2.discussionApp.client.ForumDiscussion" />
+      <module name="Discussion-Forum-Management" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ma.fstm.ilisi2.discussionApp.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ForumImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ma.fstm.ilisi2.discussionApp.server.ForumImpl" />
+      <module name="Discussion-Forum-Management" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ma.fstm.ilisi2.discussionApp.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProxyImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="proxy.ProxyImpl" />
+      <module name="Discussion-Forum-Management" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="proxy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="User1" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="ma.fstm.ilisi2.discussionApp.client.UserImpl" />
+      <module name="Discussion-Forum-Management" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ma.fstm.ilisi2.discussionApp.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="User2" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="ma.fstm.ilisi2.discussionApp.client.UserImpl" />
+      <module name="Discussion-Forum-Management" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="User3" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="ma.fstm.ilisi2.discussionApp.client.UserImpl" />
+      <module name="Discussion-Forum-Management" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.User2" />
+      <item itemvalue="Application.User3" />
+      <item itemvalue="Application.ForumDiscussion" />
+      <item itemvalue="Application.ForumImpl" />
+      <item itemvalue="Application.ProxyImpl" />
+      <item itemvalue="Application.User1" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.User1" />
+        <item itemvalue="Application.ForumImpl" />
+        <item itemvalue="Application.ForumDiscussion" />
+        <item itemvalue="Application.ProxyImpl" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -28,7 +140,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680370992526</updated>
+      <workItem from="1680370997875" duration="1251000" />
+      <workItem from="1680890501209" duration="20149000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
   </component>
 </project>
