@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c0266cb-e3af-4fa3-8529-deffa5dfb213" name="Changes" comment="Initial Commit">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/fstm/ilisi2/discussionApp/client/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/fstm/ilisi2/discussionApp/client/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ma/fstm/ilisi2/discussionApp/client/UserImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/fstm/ilisi2/discussionApp/client/UserImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/fstm/ilisi2/discussionApp/server/Forum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/fstm/ilisi2/discussionApp/server/Forum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ma/fstm/ilisi2/discussionApp/server/ForumImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/fstm/ilisi2/discussionApp/server/ForumImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/proxy/Proxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proxy/Proxy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/proxy/ProxyImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/proxy/ProxyImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -141,8 +136,16 @@
       <option name="presentableId" value="Default" />
       <updated>1680370992526</updated>
       <workItem from="1680370997875" duration="1251000" />
-      <workItem from="1680890501209" duration="20149000" />
+      <workItem from="1680890501209" duration="26814000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial Commit">
+      <created>1680979763789</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680979763789</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

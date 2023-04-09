@@ -60,6 +60,12 @@ public class UserImpl extends JFrame implements User {
         inputChat.setMinimumSize(new java.awt.Dimension(300, 40));
         inputChat.setPreferredSize(new java.awt.Dimension(300, 40));
         inputChat.setSize(300,40);
+        inputChat.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                if (evt.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER)
+                    sendButtonActionPerformed(null);
+            }
+        });
         jPanel1.add(inputChat);
 
         jPanel1.setMinimumSize(new java.awt.Dimension(382, 30));
@@ -71,10 +77,12 @@ public class UserImpl extends JFrame implements User {
 
         sendButton.setText("Send");
         sendButton.addActionListener(this::sendButtonActionPerformed);
+        sendButton.setEnabled(false);
         jPanel1.add(sendButton);
 
         usersButton.setText("users");
         usersButton.addActionListener(this::usersButtonActionPerformed);
+        usersButton.setEnabled(false);
         jPanel1.add(usersButton);
 
         disconnectButton.setText("disconnect");
@@ -87,7 +95,6 @@ public class UserImpl extends JFrame implements User {
 
         pack();
     }// </editor-fold>
-
     private void connectButtonActionPerformed(java.awt.event.ActionEvent evt) {
         try {
             System.out.println("rmi://localhost:9099/Server");
@@ -96,6 +103,8 @@ public class UserImpl extends JFrame implements User {
             this.id = this.forum.entrer(proxy);
             connectButton.setEnabled(false);
             disconnectButton.setEnabled(true);
+            sendButton.setEnabled(true);
+            usersButton.setEnabled(true);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -104,6 +113,7 @@ public class UserImpl extends JFrame implements User {
     private void sendButtonActionPerformed(java.awt.event.ActionEvent evt) {
         try{
             this.forum.dire(this.id,this.inputChat.getText());
+            inputChat.setText("");
         }catch( RemoteException ex){
             ex.printStackTrace();
         }
@@ -122,6 +132,8 @@ public class UserImpl extends JFrame implements User {
             this.forum.quiter(this.id);
             disconnectButton.setEnabled(false);
             connectButton.setEnabled(true);
+            sendButton.setEnabled(false);
+            usersButton.setEnabled(false);
         } catch (RemoteException ex) {
             ex.printStackTrace();
         }

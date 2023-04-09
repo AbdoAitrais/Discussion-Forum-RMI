@@ -2,35 +2,25 @@ package ma.fstm.ilisi2.discussionApp.server;
 
 import proxy.Proxy;
 
-import java.net.InetAddress;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
-import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.TreeMap;
 
 public class ForumImpl extends UnicastRemoteObject implements Forum {
-    int i;//id d'un client;
-    String hostname;
+    int i;
     TreeMap<Integer,Proxy> ListClient;
     public ForumImpl() throws RemoteException {
         super();
         i=0;
         ListClient= new TreeMap<>();
-
-        try{
-            hostname = InetAddress.getLocalHost().getHostName();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
     }
 
     public static void main(String[] args) {
         try {
-            Registry registry = LocateRegistry.createRegistry(9099);
+            LocateRegistry.createRegistry(9099);
             Forum server = new ForumImpl();
-            String hostname = InetAddress.getLocalHost().getHostName();
             Naming.rebind("rmi://localhost:9099/Server", server);
             System.out.println("Server listening on "+ 9099 +"...");
         } catch (Exception e) {
@@ -42,6 +32,9 @@ public class ForumImpl extends UnicastRemoteObject implements Forum {
     public synchronized int entrer(Proxy pr) throws RemoteException {
         System.out.println("Client numero "+(++i)+" connecté");
         pr.ecouter("client connecté a "+9099+ " avec Id "+i);
+        for (Proxy proxy : ListClient.values()) {
+            proxy.ecouter("user"+i+" est connecté");
+        }
         ListClient.put(i,pr);
         return i;
     }
@@ -68,6 +61,9 @@ public class ForumImpl extends UnicastRemoteObject implements Forum {
         Proxy cb;
         cb=ListClient.get(id);
         ListClient.remove(id);
-        cb.ecouter("Vous etes deconnecté de "+hostname);
+        for (Proxy proxy : ListClient.values()) {
+            proxy.ecouter("user"+id+" est déconnecté");
+        }
+        cb.ecouter("Vous etes deconnecté");
     }
 }
